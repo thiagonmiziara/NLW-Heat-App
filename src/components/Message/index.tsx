@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { MotiView } from "moti";
+
 import { UserPhoto } from "../UserPhoto";
 
 import { styles as S } from "./styles";
@@ -20,9 +22,14 @@ type DataProps = {
 export function Message({ data }: DataProps) {
   return (
     <>
-      <View style={S.container}>
+      <MotiView
+        from={{ opacity: 0, translateY: -50 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ type: "timing", duration: 700 }}
+        style={S.container}
+      >
         <Text style={S.message}>{data.text}</Text>
-      </View>
+      </MotiView>
 
       <View style={S.footer}>
         <UserPhoto sizes='SMALL' imageUri={data.user?.avatar_url} />

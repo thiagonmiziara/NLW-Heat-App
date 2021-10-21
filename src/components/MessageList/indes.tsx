@@ -20,6 +20,7 @@ export function MessageList() {
       keyboardShouldPersistTaps='never'
     >
       <Message data={message} />
+      <Message data={message} />
     </ScrollView>
   );
 }
