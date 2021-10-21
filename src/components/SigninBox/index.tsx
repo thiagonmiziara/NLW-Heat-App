@@ -6,7 +6,7 @@ import { Button } from "../Button";
 
 import { styles as S } from "./styles";
 
-export function SigninBox() {
+export function SignInBox() {
   return (
     <View style={S.container}>
       <Button
@@ -14,6 +14,7 @@ export function SigninBox() {
         color={COLORS.BLACK_PRIMARY}
         backgroundColor={COLORS.YELLOW}
         icon='github'
+        isLoading={false}
       />
     </View>
   );

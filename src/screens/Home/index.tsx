@@ -3,7 +3,8 @@ import { View } from "react-native";
 
 import { Header } from "../../components/Header";
 import { MessageList } from "../../components/MessageList/indes";
-import { SigninBox } from "../../components/SigninBox";
+import { SendMessageForm } from "../../components/SendMessageForm";
+import { SignInBox } from "../../components/SignInBox";
 
 import { styles as S } from "./styles";
 
@@ -12,7 +13,8 @@ export function Home() {
     <View style={S.container}>
       <Header />
       <MessageList />
-      <SigninBox />
+      {/* <SignInBox /> */}
+      <SendMessageForm />
     </View>
   );
 }
