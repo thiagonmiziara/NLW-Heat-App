@@ -21,20 +21,19 @@ type DataProps = {
 
 export function Message({ data }: DataProps) {
   return (
-    <>
-      <MotiView
-        from={{ opacity: 0, translateY: -50 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        transition={{ type: "timing", duration: 700 }}
-        style={S.container}
-      >
-        <Text style={S.message}>{data.text}</Text>
-      </MotiView>
+    <MotiView
+      from={{ opacity: 0, translateY: -50 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ type: "timing", duration: 700 }}
+      style={S.container}
+    >
+      <Text style={S.message}>{data.text}</Text>
 
       <View style={S.footer}>
-        <UserPhoto sizes='SMALL' imageUri={data.user?.avatar_url} />
-        <Text style={S.userName}>{data.user?.name}</Text>
+        <UserPhoto imageUri={data.user.avatar_url} sizes='SMALL' />
+
+        <Text style={S.userName}>{data.user.name}</Text>
       </View>
-    </>
+    </MotiView>
   );
 }
